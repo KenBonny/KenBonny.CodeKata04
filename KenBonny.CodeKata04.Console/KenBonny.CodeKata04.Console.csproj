@@ -6,4 +6,14 @@
   <ItemGroup>
     <Folder Include="Data" />
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="CommandLineParser">
+      <Version>2.1.1-beta</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Data\weather.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 </Project>
