@@ -2,7 +2,7 @@ namespace KenBonny.CodeKata04.Console.Weather
 {
     public class DayTemperature
     {
-        public DayTemperature(int day, int maxTemperature, int minTemperature)
+        public DayTemperature(int day, int minTemperature, int maxTemperature)
         {
             Day = day;
             MaxTemperature = maxTemperature;
