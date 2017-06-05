@@ -1,6 +1,6 @@
 using CommandLine;
 
-namespace KenBonny.CodeKata04.Console
+namespace KenBonny.CodeKata04.Console.Options
 {
     [Verb("weather", HelpText = "Display the lowest spread in weather data")]
     internal class WeatherOptions
