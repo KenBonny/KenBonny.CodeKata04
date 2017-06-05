@@ -43,6 +43,7 @@ namespace KenBonny.CodeKata04.Console
             {
                 return serviceType.IsConstructedGenericType &&
                        (
+                           serviceType.GetGenericTypeDefinition() == typeof(IRequestHandler<>) ||
                            serviceType.GetGenericTypeDefinition() == typeof(IRequestHandler<,>) ||
                            serviceType.GetGenericTypeDefinition() == typeof(IAsyncRequestHandler<,>) ||
                            serviceType.GetGenericTypeDefinition() == typeof(ICancellableAsyncRequestHandler<,>) ||
@@ -51,15 +52,14 @@ namespace KenBonny.CodeKata04.Console
                            serviceType.GetGenericTypeDefinition() == typeof(ICancellableAsyncNotificationHandler<>
                            ));
             });
+
+            //container.Register<IRequest, FindSmallestWeatherSpreadRequest>();
             
             container.Register(typeof(IPipelineBehavior<,>), typeof(RequestPreProcessorBehavior<,>));
             container.Register(typeof(IPipelineBehavior<,>), typeof(RequestPostProcessorBehavior<,>));
 //            container.Register(typeof(IPipelineBehavior<,>), typeof(GenericPipelineBehavior<,>));
 //            container.Register(typeof(IRequestPreProcessor<>), typeof(GenericRequestPreProcessor<>));
 //            container.Register(typeof(IRequestPostProcessor<,>), typeof(GenericRequestPostProcessor<,>));
-            
-            container.Register<SingleInstanceFactory>(factory => type => factory.GetInstance(type));
-            container.Register<MultiInstanceFactory>(factory => type => factory.GetAllInstances(type));
 
             const string weatherDataLocation = "WeatherDataLocation";
             container.RegisterInstance<string>(weatherDataFileLocation, weatherDataLocation);
@@ -67,6 +67,9 @@ namespace KenBonny.CodeKata04.Console
                 (serviceType, implementingType) => !serviceType.GetTypeInfo().IsClass);
             container.Register<IWeatherRepository>(
                 factory => new CsvWeatherRepository(factory.GetInstance<string>(weatherDataLocation)));
+            
+            container.Register<SingleInstanceFactory>(factory => type => factory.GetInstance(type));
+            container.Register<MultiInstanceFactory>(factory => type => factory.GetAllInstances(type));
 
             return container.GetInstance<IMediator>();
         }
