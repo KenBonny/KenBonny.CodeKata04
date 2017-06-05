@@ -2,11 +2,13 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/.idea
-/.vs
-/KenBonny.CodeKata04.Console/bin
-/KenBonny.CodeKata04.Console/obj
-/KenBonny.CodeKata04.DataAccess/bin
-/KenBonny.CodeKata04.DataAccess/obj
-/KenBonny.CodeKata04.UnitTests/bin
-/KenBonny.CodeKata04.UnitTests/obj
+/.idea/
+/.vs/
+/KenBonny.CodeKata04.Console/bin/
+/KenBonny.CodeKata04.Console/obj/
+/KenBonny.CodeKata04.DataAccess/bin/
+/KenBonny.CodeKata04.DataAccess/obj/
+/KenBonny.CodeKata04.UnitTests/bin/
+/KenBonny.CodeKata04.UnitTests/obj/
+/KenBonny.CodeKata04.Weather/bin/
+/KenBonny.CodeKata04.Weather/obj/
