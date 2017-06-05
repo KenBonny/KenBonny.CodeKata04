@@ -10,6 +10,12 @@
     <PackageReference Include="CommandLineParser">
       <Version>2.1.1-beta</Version>
     </PackageReference>
+    <PackageReference Include="LightInject">
+      <Version>5.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="MediatR">
+      <Version>3.0.1</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <None Update="Data\weather.csv">
