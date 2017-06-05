@@ -3,9 +3,9 @@
     <TargetFramework>netcoreapp1.1</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\KenBonny.CodeKata04.Console\KenBonny.CodeKata04.Console.csproj">
-      <Project>{0e954433-61eb-4503-af9b-7330bb95024f}</Project>
-      <Name>KenBonny.CodeKata04.Console</Name>
+    <ProjectReference Include="..\KenBonny.CodeKata04.Weather\KenBonny.CodeKata04.Weather.csproj">
+      <Project>{390BF73C-2CC5-4A7D-B01C-68DD06E92099}</Project>
+      <Name>KenBonny.CodeKata04.Weather</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

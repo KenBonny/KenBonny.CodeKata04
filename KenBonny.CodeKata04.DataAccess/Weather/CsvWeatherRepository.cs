@@ -5,11 +5,11 @@ using System.IO;
 using System.Text;
 using CsvHelper;
 using CsvHelper.Configuration;
-using KenBonny.CodeKata04.Console.Weather;
+using KenBonny.CodeKata04.Weather;
 
 namespace KenBonny.CodeKata04.DataAccess.Weather
 {
-    public class CsvWeatherRepository : IWeatherRepository, IDisposable
+    public class CsvWeatherRepository : IWeatherRepository
     {
         private readonly TextReader _weatherFile;
 
