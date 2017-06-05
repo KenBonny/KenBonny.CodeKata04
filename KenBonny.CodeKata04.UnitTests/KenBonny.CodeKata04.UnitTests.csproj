@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.0.0" />
+    <PackageReference Include="xunit" Version="2.2.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.2.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KenBonny.CodeKata04.Console\KenBonny.CodeKata04.Console.csproj">
+      <Project>{0e954433-61eb-4503-af9b-7330bb95024f}</Project>
+      <Name>KenBonny.CodeKata04.Console</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KenBonny.CodeKata04.DataAccess\KenBonny.CodeKata04.DataAccess.csproj">
+      <Project>{a9880f91-f796-4c2e-b70f-bd32401d23be}</Project>
+      <Name>KenBonny.CodeKata04.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KenBonny.CodeKata04.DataAccess\KenBonny.CodeKata04.DataAccess.csproj">
+      <Project>{a9880f91-f796-4c2e-b70f-bd32401d23be}</Project>
+      <Name>KenBonny.CodeKata04.DataAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>
