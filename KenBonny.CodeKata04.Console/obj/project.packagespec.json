@@ -1,0 +1,28 @@
+﻿{
+  "version": "1.0.0",
+  "restore": {
+    "projectUniqueName": "C:\\Users\\kenbo\\Documents\\Projects\\KenBonny.CodeKata04\\KenBonny.CodeKata04.Console\\KenBonny.CodeKata04.Console.csproj",
+    "projectName": "KenBonny.CodeKata04.Console",
+    "projectPath": "C:\\Users\\kenbo\\Documents\\Projects\\KenBonny.CodeKata04\\KenBonny.CodeKata04.Console\\KenBonny.CodeKata04.Console.csproj",
+    "outputPath": "C:\\Users\\kenbo\\Documents\\Projects\\KenBonny.CodeKata04\\KenBonny.CodeKata04.Console\\obj\\",
+    "projectStyle": "PackageReference",
+    "originalTargetFrameworks": [
+      "netcoreapp1.1"
+    ],
+    "frameworks": {
+      "netcoreapp1.1": {
+        "projectReferences": {}
+      }
+    }
+  },
+  "frameworks": {
+    "netcoreapp1.1": {
+      "dependencies": {
+        "Microsoft.NETCore.App": {
+          "target": "Package",
+          "version": "1.1.1"
+        }
+      }
+    }
+  }
+}
