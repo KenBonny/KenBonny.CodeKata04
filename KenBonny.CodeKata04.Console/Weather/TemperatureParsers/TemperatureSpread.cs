@@ -1,4 +1,4 @@
-﻿namespace KenBonny.CodeKata04.Console.Weather
+﻿namespace KenBonny.CodeKata04.Console.Weather.TemperatureParsers
 {
     internal class TemperatureSpread
     {
