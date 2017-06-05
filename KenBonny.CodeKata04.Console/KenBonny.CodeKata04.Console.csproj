@@ -5,6 +5,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="Data" />
+    <Folder Include="Weather" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="CommandLineParser">
@@ -21,5 +22,12 @@
     <None Update="Data\weather.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KenBonny.CodeKata04.DataAccess\KenBonny.CodeKata04.DataAccess.csproj" />
+    <ProjectReference Include="..\KenBonny.CodeKata04.Weather\KenBonny.CodeKata04.Weather.csproj">
+      <Project>{390BF73C-2CC5-4A7D-B01C-68DD06E92099}</Project>
+      <Name>KenBonny.CodeKata04.Weather</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>

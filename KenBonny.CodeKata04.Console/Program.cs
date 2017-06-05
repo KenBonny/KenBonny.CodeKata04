@@ -2,6 +2,8 @@
 using CommandLine;
 using KenBonny.CodeKata04.Console.Options;
 using KenBonny.CodeKata04.Console.Requests;
+using KenBonny.CodeKata04.DataAccess.Weather;
+using KenBonny.CodeKata04.Weather;
 using LightInject;
 using MediatR;
 using MediatR.Pipeline;
@@ -17,15 +19,19 @@ namespace KenBonny.CodeKata04.Console
                 settings.EnableDashDash = true;
             });
 
-            IRequest command;
+            IRequest request = null;
+            IMediator mediator = null;
             parser.ParseArguments<WeatherOptions>(args)
-                .WithParsed<WeatherOptions>(option => command =
-                    new FindSmallestWeatherSpreadRequest(option.FileLocation));
+                .WithParsed<WeatherOptions>(option =>
+                {
+                    request = new FindSmallestWeatherSpreadRequest();
+                    mediator = BuildMediator(option.FileLocation);
+                });
 
-            
+            mediator.Send(request);
         }
 
-        private static IMediator BuildMediator()
+        private static IMediator BuildMediator(string weatherDataFileLocation)
         {
             var container = new ServiceContainer();
             container.Register<IMediator, Mediator>();
@@ -54,6 +60,13 @@ namespace KenBonny.CodeKata04.Console
             
             container.Register<SingleInstanceFactory>(factory => type => factory.GetInstance(type));
             container.Register<MultiInstanceFactory>(factory => type => factory.GetAllInstances(type));
+
+            const string weatherDataLocation = "WeatherDataLocation";
+            container.RegisterInstance<string>(weatherDataFileLocation, weatherDataLocation);
+            container.RegisterAssembly(typeof(ITemperatureParser).GetTypeInfo().Assembly,
+                (serviceType, implementingType) => !serviceType.GetTypeInfo().IsClass);
+            container.Register<IWeatherRepository>(
+                factory => new CsvWeatherRepository(factory.GetInstance<string>(weatherDataLocation)));
 
             return container.GetInstance<IMediator>();
         }
