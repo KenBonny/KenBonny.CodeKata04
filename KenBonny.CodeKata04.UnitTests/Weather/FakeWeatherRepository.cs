@@ -20,5 +20,10 @@ namespace KenBonny.CodeKata04.UnitTests.Weather
 
             return this;
         }
+
+        public void Dispose()
+        {
+            _temperatures = null;
+        }
     }
 }
