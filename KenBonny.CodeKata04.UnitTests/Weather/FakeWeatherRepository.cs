@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using KenBonny.CodeKata04.Console.Weather;
+using KenBonny.CodeKata04.Weather;
 
 namespace KenBonny.CodeKata04.UnitTests.Weather
 {

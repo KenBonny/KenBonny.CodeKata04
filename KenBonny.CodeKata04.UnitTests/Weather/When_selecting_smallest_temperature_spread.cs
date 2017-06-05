@@ -1,6 +1,6 @@
 ﻿using System.Linq;
-using KenBonny.CodeKata04.Console.Weather;
-using KenBonny.CodeKata04.Console.Weather.TemperatureParsers;
+using KenBonny.CodeKata04.Weather;
+using KenBonny.CodeKata04.Weather.TemperatureParsers;
 using Xunit;
 
 namespace KenBonny.CodeKata04.UnitTests.Weather

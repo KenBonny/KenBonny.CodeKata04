@@ -20,5 +20,9 @@
       <Project>{a9880f91-f796-4c2e-b70f-bd32401d23be}</Project>
       <Name>KenBonny.CodeKata04.DataAccess</Name>
     </ProjectReference>
+    <ProjectReference Include="..\KenBonny.CodeKata04.Weather\KenBonny.CodeKata04.Weather.csproj">
+      <Project>{390BF73C-2CC5-4A7D-B01C-68DD06E92099}</Project>
+      <Name>KenBonny.CodeKata04.Weather</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>
