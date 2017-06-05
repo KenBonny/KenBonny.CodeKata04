@@ -1,6 +1,7 @@
 ﻿using System.Reflection;
 using CommandLine;
-using KenBonny.CodeKata04.Console.Commands;
+using KenBonny.CodeKata04.Console.Options;
+using KenBonny.CodeKata04.Console.Requests;
 using LightInject;
 using MediatR;
 using MediatR.Pipeline;
@@ -16,10 +17,10 @@ namespace KenBonny.CodeKata04.Console
                 settings.EnableDashDash = true;
             });
 
-            ICommand command;
+            IRequest command;
             parser.ParseArguments<WeatherOptions>(args)
                 .WithParsed<WeatherOptions>(option => command =
-                    new FindSmallestWeatherSpreadCommand(option.FileLocation));
+                    new FindSmallestWeatherSpreadRequest(option.FileLocation));
 
             
         }
@@ -32,7 +33,7 @@ namespace KenBonny.CodeKata04.Console
                 (serviceType, implementingType) => !serviceType.GetTypeInfo().IsClass);
             container.RegisterInstance(System.Console.Out);
             
-            container.RegisterAssembly(typeof(FindSmallestWeatherSpreadCommand).GetTypeInfo().Assembly, (serviceType, implementingType) =>
+            container.RegisterAssembly(typeof(FindSmallestWeatherSpreadRequest).GetTypeInfo().Assembly, (serviceType, implementingType) =>
             {
                 return serviceType.IsConstructedGenericType &&
                        (
