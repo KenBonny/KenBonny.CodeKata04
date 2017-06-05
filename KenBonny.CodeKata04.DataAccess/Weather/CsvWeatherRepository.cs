@@ -47,7 +47,7 @@ namespace KenBonny.CodeKata04.DataAccess.Weather
             var day = weatherCsvReader.GetField<int>(0);
             var maxTemp = weatherCsvReader.GetField<int>(1);
             var minTemp = weatherCsvReader.GetField<int>(2);
-            var dayTemperature = new DayTemperature(day, maxTemp, minTemp);
+            var dayTemperature = new DayTemperature(day, minTemp, maxTemp);
             return dayTemperature;
         }
 
