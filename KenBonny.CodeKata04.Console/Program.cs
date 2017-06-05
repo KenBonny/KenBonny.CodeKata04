@@ -1,8 +1,8 @@
 ﻿namespace KenBonny.CodeKata04.Console
 {
-    class Program
+    internal static class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             System.Console.WriteLine("Hello World!");
         }
