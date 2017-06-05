@@ -1,0 +1,36 @@
+﻿{
+  "version": "1.0.0",
+  "restore": {
+    "projectUniqueName": "C:\\Users\\kenbo\\Documents\\Projects\\KenBonny.CodeKata04\\KenBonny.CodeKata04.DataAccess\\KenBonny.CodeKata04.DataAccess.csproj",
+    "projectName": "KenBonny.CodeKata04.DataAccess",
+    "projectPath": "C:\\Users\\kenbo\\Documents\\Projects\\KenBonny.CodeKata04\\KenBonny.CodeKata04.DataAccess\\KenBonny.CodeKata04.DataAccess.csproj",
+    "outputPath": "C:\\Users\\kenbo\\Documents\\Projects\\KenBonny.CodeKata04\\KenBonny.CodeKata04.DataAccess\\obj\\",
+    "projectStyle": "PackageReference",
+    "originalTargetFrameworks": [
+      "netcoreapp1.1"
+    ],
+    "frameworks": {
+      "netcoreapp1.1": {
+        "projectReferences": {
+          "C:\\Users\\kenbo\\Documents\\Projects\\KenBonny.CodeKata04\\KenBonny.CodeKata04.Console\\KenBonny.CodeKata04.Console.csproj": {
+            "projectPath": "C:\\Users\\kenbo\\Documents\\Projects\\KenBonny.CodeKata04\\KenBonny.CodeKata04.Console\\KenBonny.CodeKata04.Console.csproj"
+          }
+        }
+      }
+    }
+  },
+  "frameworks": {
+    "netcoreapp1.1": {
+      "dependencies": {
+        "Microsoft.NETCore.App": {
+          "target": "Package",
+          "version": "1.1.1"
+        },
+        "CsvHelper": {
+          "target": "Package",
+          "version": "2.16.3"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KenBonny.CodeKata04.Console\KenBonny.CodeKata04.Console.csproj">
+      <Project>{0e954433-61eb-4503-af9b-7330bb95024f}</Project>
+      <Name>KenBonny.CodeKata04.Console</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="CsvHelper">
+      <Version>2.16.3</Version>
+    </PackageReference>
+  </ItemGroup>
+</Project>
